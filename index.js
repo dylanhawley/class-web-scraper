@@ -4,6 +4,7 @@ const puppeteer = require('puppeteer');
 const schedule = require('node-schedule');
 const config = require('./config');
 
+// Amazon Web Services configuration
 AWS.config.update({
   accessKeyId: config.aws.accessKeyId,
   secretAccessKey: config.aws.secretAccessKey,
@@ -95,12 +96,22 @@ const scrapeCourses = async (term, courses, account) => {
   return data;
 }
 
+// List of courses to check
 const courses = [
   { courseCode: 'ENC3246' },
   { courseCode: 'ACG2021' },
 ];
 
+// Cron job that checks ONE.UF every 2 minutes
 schedule.scheduleJob('*/2 * * * *', () => {
+  /* The first parameter in scrapeCourses specifies the term.
+   * At the time of writing this, the term number correspondes to the following
+   * 1 - Spring 2020
+   * 2 - Summer 2020
+   * 3 - Fall 2020
+   * These numbers refer to the cards on ONE.UF.
+   * For example, Fall 2020 is the third card in the list at this moment.
+  */
   scrapeCourses(3, courses, config.user).then(resp => {
     for (course in resp){
       for (section in resp[course]) {
@@ -112,7 +123,7 @@ schedule.scheduleJob('*/2 * * * *', () => {
           // AWS SNS message
           const params = {
             Message: msg,
-            PhoneNumber: '+17249948887',
+            PhoneNumber: config.user.phone,
           };
           var publishTextPromise = new AWS.SNS({apiVersion: '2010-03-31'}).publish(params).promise();
           publishTextPromise.then(data => {
