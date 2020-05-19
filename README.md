@@ -1,6 +1,6 @@
 # Class Web Scraper
 
-[![Build Status](https://travis-ci.com/dylanhawley/class-web-scraper.svg?branch=master)](https://travis-ci.com/dylanhawley/class-web-scraper)
+[![HitCount](http://hits.dwyl.com/dylanhawley/class-web-scraper.svg)](http://hits.dwyl.com/dylanhawley/class-web-scraper)
 
 Node.js powered webscraper that scans ONE.UF for available seats in class sections during registration period. This software was originally not open-sourced, until I received this email:
 
