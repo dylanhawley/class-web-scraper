@@ -1,6 +1,8 @@
 # Class Web Scraper
 Node.js powered webscraper that scans ONE.UF for available seats in class sections during registration period. This software was originally not open-sourced, until I received this email:
->The University of Florida has established a mandatory date for all students to enroll in multi-factor authentication: June 22, 2020. 
+
+>The University of Florida has established a mandatory date for all students to enroll in multi-factor authentication: June 22, 2020.
+
 Multi-factor authentication prevents web-scrapers such as this one from logging into web portals on its own behalf. Therefore, this software will become obsolete effective the date mentioned in the email above.
 
 ## Setup
