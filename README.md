@@ -1,4 +1,7 @@
 # Class Web Scraper
+
+[![Build Status](https://travis-ci.com/dylanhawley/class-web-scraper.svg?branch=master)](https://travis-ci.com/dylanhawley/class-web-scraper)
+
 Node.js powered webscraper that scans ONE.UF for available seats in class sections during registration period. This software was originally not open-sourced, until I received this email:
 
 >The University of Florida has established a mandatory date for all students to enroll in multi-factor authentication: June 22, 2020.
@@ -10,7 +13,8 @@ Multi-factor authentication prevents web-scrapers such as this one from logging 
 Make sure you have [Node.js](https://nodejs.org/en/download/) installed on your computer.
 
 Install all of the node dependencies by running the following command in the main directory
-```
+
+```bash
 npm install
 ```
 
@@ -34,6 +38,7 @@ module.exports = {
 ## Starting the Server
 
 Start the Node.js program with this command
-```
+
+```bash
 npm start
 ```
