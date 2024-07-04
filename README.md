@@ -2,7 +2,7 @@
 
 [![HitCount](http://hits.dwyl.com/dylanhawley/class-web-scraper.svg)](http://hits.dwyl.com/dylanhawley/class-web-scraper)
 
-Node.js powered webscraper that scans ONE.UF for available seats in class sections during registration period. This software was originally not open-sourced, until I received this email:
+Node.js powered webscraper that scans ONE.UF for available seats in class sections during registration period. This software was not originally open-sourced, until I received this email:
 
 >The University of Florida has established a mandatory date for all students to enroll in multi-factor authentication: June 22, 2020.
 
